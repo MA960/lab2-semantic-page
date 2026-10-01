@@ -1,40 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8'>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mubeens Profile</title>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubeen's Profile</title>
 </head>
+
 <body>
 
-
+    <!-- Header -->
     <header>
-        <h1> Mubeen Amir</h1>
-        <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#contact">Contact</a>
-        </nav>
+        <h1>Mubeen Amir</h1>
 
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <main>
-    <article id="about"></article>
-    <section id="skills"></section>
-    <section id="timeline"></section>
-    <aside></aside>
-    <section id="media"></section>
-    <section id="contact"></section>
-    </main>
-  <p>
-    
-  </p>
-<footer></footer>
 
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <article id="about">
+            <h2>About Me</h2>
+
+            <figure>
+                <img src="pfp.jpg" alt="Photo of Mubeen Amir" width="180">
+                <figcaption>That's me!</figcaption>
+            </figure>
+
+            <p>
+                I'm a student of BSCS with aspirations in Spring Boot
+                web development, mostly on the client side.
+            </p>
+
+            <p>
+                I hope I can make a profitable SaaS product later on in
+                my life which can be worth a lot of money.
+            </p>
+
+            <blockquote>
+                <p>
+                    "The best way to learn is by building."
+                </p>
+            </blockquote>
+        </article>
+
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Git and GitHub</li>
+            </ul>
+        </section>
+
+
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <h2>My Timeline</h2>
+
+            <ol>
+                <li>Started studying BSCS.</li>
+                <li>Learned the basics of HTML and web development.</li>
+                <li>Started learning Java and Spring Boot.</li>
+                <li>Started working on CIT331 Lab 2.</li>
+            </ol>
+        </section>
+
+
+        <!-- Fun Fact -->
+        <aside>
+            <h2>Fun Fact</h2>
+
+            <p>
+                I want to build my own SaaS product and turn it into
+                a successful business someday.
+            </p>
+        </aside>
+
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>My Media</h2>
+
+            <video controls width="480">
+                <source src="intro.webm" type="video/webm">
+                <source src="intro.mp4" type="video/mp4">
+
+                Your browser does not support the video element.
+            </video>
+
+            <p>
+                <strong>Transcript Summary:</strong>
+                A short introduction about me, my studies, and my
+                interest in web development.
+            </p>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form id="contact-form">
+
+                <fieldset>
+                    <legend>Send Me a Message</legend>
+
+                    <p>
+                        <label for="name">Name:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <br>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="topic">Topic:</label>
+                        <br>
+
+                        <select id="topic" name="topic">
+                            <option value="general">General</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="bug">Report a Bug</option>
+                        </select>
+                    </p>
+
+
+                    <fieldset>
+                        <legend>Preferred Reply Method</legend>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="reply"
+                                value="email"
+                                checked
+                            >
+                            Email
+                        </label>
+
+                        <br>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="reply"
+                                value="phone"
+                            >
+                            Phone
+                        </label>
+                    </fieldset>
+
+
+                    <p>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="subscribe"
+                                name="subscribe"
+                            >
+                            Subscribe to updates
+                        </label>
+                    </p>
+
+
+                    <p>
+                        <label for="callback-date">
+                            Preferred Callback Date:
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="date"
+                            id="callback-date"
+                            name="callback-date"
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="urgency">
+                            Urgency (1 = Whenever, 10 = Right Now):
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="range"
+                            id="urgency"
+                            name="urgency"
+                            min="1"
+                            max="10"
+                            value="5"
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="message">Message:</label>
+                        <br>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            cols="40"
+                            minlength="10"
+                            required
+                        ></textarea>
+                    </p>
+
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+            <br>
+
+            <button id="clear-btn" type="button">
+                Clear Saved Data
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            2026 Mubeen Amir | CIT331 Web Technologies
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
-
 
 </html>
